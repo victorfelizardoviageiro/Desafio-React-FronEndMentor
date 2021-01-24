@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box {
+  padding: 0 20px;
+  height: 50px;
+  border-radius: 6px;
+  background: #25273c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box:hover p {
+  color: #e4e5f1;
+}
+
+.box:hover .delete {
+  opacity: 1;
+}
+
+.box--checked .box-icon {
+  border: none;
+  background: url("../images/icon-check.svg") center no-repeat, -webkit-gradient(linear, left top, right top, from(#00d2ff), to(#928dab));
+  background: url("../images/icon-check.svg") center no-repeat, linear-gradient(to right, #00d2ff, #928dab);
+}
+
+.box--checked .box-content p {
+  color: #4d5066;
+  text-decoration: line-through;
+}
+
+.box-icon {
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: 2px solid #393a4c;
+}
+
+.box-icon:hover {
+  border-color: #3a7bfd;
+}
+
+.box-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.box-content .delete {
+  cursor: pointer;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  opacity: 0;
+}
+
+.box-content p {
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  color: #cacde8;
+}
+
+.box-content p:hover {
+  color: #e4e5f1;
+}
+
+.box-content form {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.box-content form input {
+  font-size: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #cacde8;
+  padding: 0 5px;
+  background: none;
+  border: none;
+  width: 100%;
+  height: 28px;
+}
+
+.box-content form input:focus {
+  outline: none;
+}
+
+.box-content form input::-webkit-input-placeholder {
+  color: #777a92;
+  font-size: 1rem;
+}
+
+.box-content form input:-ms-input-placeholder {
+  color: #777a92;
+  font-size: 1rem;
+}
+
+.box-content form input::-ms-input-placeholder {
+  color: #777a92;
+  font-size: 1rem;
+}
+
+.box-content form input::placeholder {
+  color: #777a92;
+  font-size: 1rem;
+}
+
+.todo-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 300px;
+  background: url("../images/bg-desktop-dark.jpg");
+  background-size: cover;
+}
+
+.todo-top .title {
+  letter-spacing: .5ch;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.todo-top .title img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.todo-bottom {
+  margin-top: -65px;
+}
+
+.todo-bottom .box + .box {
+  border-top: 1px solid #393a4c;
+}
+
+.todo-bottom .box {
+  border-radius: 0;
+}
+
+.todo-bottom .box:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.todo-bottom .box:last-child {
+  font-size: .9rem;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.todo-bottom .box:last-child p {
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  color: #4d5066;
+}
+
+.todo-bottom .box:last-child p:not(:first-child) {
+  cursor: pointer;
+}
+
+.todo-bottom .box:last-child p:not(:first-child):hover {
+  color: #cacde8;
+}
+
+.todo-bottom .box:last-child .centered-text {
+  font-weight: 700;
+  font-size: .92rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.todo-bottom .box:last-child .centered-text--active {
+  color: #3a7bfd;
+}
+
+.todo-bottom .box:last-child .centered-text p + p {
+  margin-left: 12px;
+}
+/*# sourceMappingURL=main.css.map */
